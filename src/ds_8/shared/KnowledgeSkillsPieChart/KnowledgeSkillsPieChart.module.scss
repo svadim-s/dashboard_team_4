@@ -1,0 +1,26 @@
+.pieChartWrapperSkills {
+  width: 418px;
+  height: 349px;
+  background-color: #222128;
+  border-radius: 16px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pieChartText {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.chartWrapper {
+  width: 250px;
+  height: 250px;
+}
+
+.pieChartSkills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

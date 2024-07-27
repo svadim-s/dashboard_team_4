@@ -1,0 +1,27 @@
+.barChartEmployeeWrapper {
+  height: 429px;
+  width: 870px;
+  background-color: #222128;
+  border-radius: 16px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.employeeText {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.employeeChart {
+  width: 350px;
+  height: 320px;
+}
+
+.employeeContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}

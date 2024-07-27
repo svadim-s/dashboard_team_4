@@ -1,0 +1,24 @@
+.lineChartWrapper {
+  width: 750px;
+  height: 485px;
+  padding: 15px;
+  background-color: #222128;
+  border-radius: 16px;
+}
+
+.lineChartText {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 0 15px 15px 15px;
+}
+
+.lineChart {
+  width: 550px;
+  height: 430px;
+}
+
+.lineChartContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}

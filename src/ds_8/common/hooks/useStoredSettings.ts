@@ -4,13 +4,12 @@ import dayjs, { Dayjs } from 'dayjs';
 const useStoredSettings = () => {
   const initialDates: [Dayjs, Dayjs] = [dayjs('2015'), dayjs('2024')];
   const [selectedDates, setSelectedDates] = useState<[Dayjs, Dayjs] | null>(initialDates);
-  const [isFilters, setIsFilters] = useState(false);
   const [selectedGrades, setSelectedGrades] = useState<string[]>([]);
   const [selectedFramework, setSelectedFramework] = useState<string[]>([]);
   const [selectedDevEnv, setSelectedDevEnv] = useState<string[]>([]);
   const [selectedTools, setSelectedTools] = useState<string[]>([]);
-  const [selectedFirstUserId, setSelectedFirstUserId] = useState<string>('');
-  const [selectedSecondUserId, setSelectedSecondUserId] = useState<string>('');
+  const [selectedFirstUserId, setSelectedFirstUserId] = useState<string>('3581');
+  const [selectedSecondUserId, setSelectedSecondUserId] = useState<string>('1649');
   const [selectedTab, setSelectedTab] = useState<string | null>('фреймворки');
 
   useEffect(() => {
@@ -26,7 +25,6 @@ const useStoredSettings = () => {
     if (storedDates) {
       const parsedDates = JSON.parse(storedDates).map((date: string) => dayjs(date)) as [Dayjs, Dayjs];
       setSelectedDates(parsedDates);
-      setIsFilters(true);
     }
     if (storedGrades) {
       setSelectedGrades(Object.keys(JSON.parse(storedGrades)).filter(key => JSON.parse(storedGrades)[key]));
@@ -53,7 +51,6 @@ const useStoredSettings = () => {
 
   return {
     selectedDates,
-    isFilters,
     selectedGrades,
     selectedFramework,
     selectedDevEnv,
@@ -62,7 +59,6 @@ const useStoredSettings = () => {
     selectedSecondUserId,
     selectedTab,
     setSelectedDates,
-    setIsFilters,
     setSelectedGrades,
     setSelectedFramework,
     setSelectedDevEnv,

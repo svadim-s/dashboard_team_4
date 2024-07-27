@@ -9,12 +9,13 @@ interface SearchProps {
   title: string
   storageKey: string
   onChange: (storageKey: string, value: string) => void
+  initialData: string
 }
 
-const Search = ({ title, storageKey, onChange }: SearchProps) => {
+const Search = ({ title, storageKey, onChange, initialData }: SearchProps) => {
   const dispatch = useAppDispatch()
   const { data } = useAppSelector((state) => state.users)
-  const [input, setInput] = useState('')
+  const [input, setInput] = useState(initialData)
   const [showResults, setShowResults] = useState(false)
 
   useEffect(() => {
