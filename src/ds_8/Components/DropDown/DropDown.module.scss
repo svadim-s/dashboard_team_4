@@ -1,0 +1,8 @@
+.rotatedOpen {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotatedClose {
+  transition: transform 0.3s ease-in-out;
+}

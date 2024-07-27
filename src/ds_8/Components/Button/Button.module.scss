@@ -1,0 +1,32 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 11px;
+  height: 32px;
+  background-color: transparent;
+}
+
+.withBorder {
+  border: 1px solid #151515;
+  border-radius: 4px;
+}
+
+.noBorder {
+  border: none;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 32px;
+
+}
+
+.primary {
+  color: #fff;
+}
+
+.secondary {
+  color: #222128;
+}

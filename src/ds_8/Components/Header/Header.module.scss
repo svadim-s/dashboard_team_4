@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 35px;
+  padding: 42px 65px 30px 65px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.text {
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #E76363 0%, #373F81 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

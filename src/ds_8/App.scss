@@ -1,0 +1,258 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  color: #fff;
+  font-size: 15px;
+  padding: 20px 30px;
+  font-family: 'Inter', 'PT Sans', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100vh;
+  background-color: #16161C;
+}
+
+.scroller {
+  &::-webkit-scrollbar:horizontal {
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar:vertical {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(175, 197, 216, 0.3);
+    border-radius: 10px;
+    border: 0;
+    transition: all .2s ease-in-out;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    transition: all .2s ease-in-out;
+  }
+}
+
+.DsShell {
+  background-color: #DAE6FF;
+}
+
+.Dashlet {
+  border-radius: 0;
+  margin: 0;
+  background-color: #DAE6FF;
+}
+
+.Dashboards__ListItem {
+  padding: 0 !important;
+}
+
+.Dashboard {
+  border-radius: 0;
+}
+
+.Dashlet__Footer {
+  display: none;
+}
+
+.Dashboard__Scroller {
+  padding: 0 !important;
+}
+
+.separator {
+  height: 2px;
+  background-color: #E9F0FF;
+}
+
+.leftWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.pieCharts {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+}
+
+.rightWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+// PieChart
+
+.pieChartWrapperLevel {
+  width: 427px;
+  height: 349px;
+  background-color: #222128;
+  border-radius: 16px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pieChartWrapperSkills {
+  width: 418px;
+  height: 349px;
+  background-color: #222128;
+  border-radius: 16px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chartWrapper {
+  width: 250px;
+  height: 250px;
+}
+
+.pieChartSkills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pieChartText {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+// LineChart
+
+.lineChartWrapper {
+  width: 750px;
+  height: 485px;
+  padding: 15px;
+  background-color: #222128;
+  border-radius: 16px;
+}
+
+.lineChartText {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 0 15px 15px 15px;
+}
+
+.lineChart {
+  width: 550px;
+  height: 430px;
+}
+
+.lineChartContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+// BarChart
+
+.barChartWrapper {
+  background-color: #222128;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  height: 302px;
+}
+
+.barChartText {
+  padding: 15px 0px 0px 80px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.barChart {
+  padding: 15px;
+  width: 100%;
+  height: 270px;
+}
+
+.barChartEmployeeWrapper {
+  height: 429px;
+  width: 870px;
+  background-color: #222128;
+  border-radius: 16px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.employeeText {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.employeeChart {
+  width: 350px;
+  height: 320px;
+}
+
+.employeeContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+// DatePicker
+.ant-picker {
+  color: #fff;
+  background-color: #222128;
+  border-radius: 16px;
+  height: 42px;
+
+  .ant-picker-input > input {
+    width: 70px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .ant-picker-panel-container {
+    background-color: #222128;
+  }
+
+  .ant-picker-separator {
+    color: #fff;
+  }
+
+  .ant-picker-range-separator {
+    padding: 0 8px 0 0;
+  }
+
+  .ant-picker-suffix {
+    color: #fff;
+  }
+
+  .ant-picker-clear {
+    color: #fff;
+  }
+
+  &:hover {
+    border: 1px solid #978F8F;
+    background-color: #222128;
+  }
+}
