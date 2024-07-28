@@ -8,3 +8,7 @@ export const knowledgeAllDataSelector = ((state: RootState) => state.pieChart.kn
 export const knowledgeJuniorPercentageSelector = ((state: RootState) => state.pieChart.knowledgeJuniorPercentage)
 export const knowledgeMiddlePercentageSelector = ((state: RootState) => state.pieChart.knowledgeMiddlePercentage)
 export const knowledgeSeniorPercentageSelector = ((state: RootState) => state.pieChart.knowledgeSeniorPercentage)
+
+export const levelJuniorDataSelector = ((state: RootState) => state.pieChart.juniorData)
+export const levelHigherDataSelector = ((state: RootState) => state.pieChart.highData)
+export const levelJuniorPercentageSelector = ((state: RootState) => state.pieChart.juniorPercentage)

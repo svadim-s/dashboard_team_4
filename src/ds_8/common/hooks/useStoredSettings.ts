@@ -3,11 +3,16 @@ import dayjs, { Dayjs } from 'dayjs';
 
 const useStoredSettings = () => {
   const initialDates: [Dayjs, Dayjs] = [dayjs('2015'), dayjs('2024')];
+  const initialGrades: string[] = ['Junior', 'Novice'];
+  const initialFrameworks: string[] = ['React', 'Django', 'Angular'];
+  const initialDevEnv: string[] = ['PyCharm', 'IntelliJ IDEA', 'Microsoft Visual Studio'];
+  const initialTools: string[] = ['Figma', 'Git', 'Pythot/pytest', 'SQL/dbeaver'];
+
   const [selectedDates, setSelectedDates] = useState<[Dayjs, Dayjs] | null>(initialDates);
-  const [selectedGrades, setSelectedGrades] = useState<string[]>([]);
-  const [selectedFramework, setSelectedFramework] = useState<string[]>([]);
-  const [selectedDevEnv, setSelectedDevEnv] = useState<string[]>([]);
-  const [selectedTools, setSelectedTools] = useState<string[]>([]);
+  const [selectedGrades, setSelectedGrades] = useState<string[]>(initialGrades);
+  const [selectedFramework, setSelectedFramework] = useState<string[]>(initialFrameworks);
+  const [selectedDevEnv, setSelectedDevEnv] = useState<string[]>(initialDevEnv);
+  const [selectedTools, setSelectedTools] = useState<string[]>(initialTools);
   const [selectedFirstUserId, setSelectedFirstUserId] = useState<string>('3581');
   const [selectedSecondUserId, setSelectedSecondUserId] = useState<string>('1649');
   const [selectedTab, setSelectedTab] = useState<string | null>('фреймворки');

@@ -3,7 +3,7 @@ import cls from './KnowledgeSkillsPieChart.module.scss'
 import { PieChartComponent } from '../../../ds_res/src/Components/PieChart'
 import { useAppDispatch, useAppSelector } from '../../common/hooks/useAppDispatch'
 import { fetchPieChartCountUsers, fetchPieChartKnowledgeJunior, fetchPieChartKnowledgeMiddle, fetchPieChartKnowledgeSenior } from '../../services/fetchDataPieChart'
-import { knowledgeAllDataSelector, knowledgeJuniorDataSelector, knowledgeJuniorPercentageSelector, knowledgeMiddleDataSelector, knowledgeMiddlePercentageSelector, knowledgeSeniorDataSelector, knowledgeSeniorPercentageSelector } from '../../selectors/pieChartSelectors'
+import { knowledgeAllDataSelector, knowledgeJuniorDataSelector, knowledgeJuniorPercentageSelector, knowledgeMiddleDataSelector, knowledgeMiddlePercentageSelector, knowledgeSeniorDataSelector, knowledgeSeniorPercentageSelector } from '../../selectors/pieChartSelector'
 import { calculateKnowledgeJuniorPercentage, calculateKnowledgeMiddlePercentage, calculateKnowledgeSeniorPercentage } from '../../slices/pieChartSlice'
 
 const KnowledgeSkillsPieChart = () => {

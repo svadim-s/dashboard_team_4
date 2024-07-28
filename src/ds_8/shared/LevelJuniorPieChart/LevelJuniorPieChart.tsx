@@ -4,6 +4,7 @@ import cls from './LevelJuniorPieChart.module.scss'
 import { useAppDispatch, useAppSelector } from '../../common/hooks/useAppDispatch'
 import { calculateJuniorPercentage } from '../../slices/pieChartSlice'
 import { fetchPieChartHigher, fetchPieChartJunior } from '../../services/fetchDataPieChart'
+import { levelHigherDataSelector, levelJuniorDataSelector, levelJuniorPercentageSelector } from '../../selectors/pieChartSelector'
 
 interface LevelJuniorPieChartProps {
   selectedFramework: string[]
@@ -13,7 +14,10 @@ interface LevelJuniorPieChartProps {
 
 const LevelJuniorPieChart = ({ selectedDevEnv, selectedFramework, selectedTools }: LevelJuniorPieChartProps) => {
   const dispatch = useAppDispatch()
-  const { juniorPercentage, juniorData, highData } = useAppSelector((state) => state.pieChart)
+  const juniorPercentage = useAppSelector(levelJuniorPercentageSelector)
+  const juniorData = useAppSelector(levelJuniorDataSelector)
+  const highData = useAppSelector(levelHigherDataSelector)
+
   const [dataPieChartJunior, setDataPieChartJunior] = useState([]);
 
   useEffect(() => {

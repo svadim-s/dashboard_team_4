@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
-interface CheckboxItem {
+export interface CheckboxItem {
   name: string;
   checked: boolean;
 }
 
 const useCheckbox = (key: string, initialData: CheckboxItem[]) => {
-  const [data, setData] = useState<CheckboxItem[]>(initialData);
+  const [data, setData] = useState<CheckboxItem[]>([]);
 
   useEffect(() => {
     const storedData = localStorage.getItem(key);
@@ -17,21 +17,26 @@ const useCheckbox = (key: string, initialData: CheckboxItem[]) => {
         checked: parsedData[item.name] !== undefined ? parsedData[item.name] : item.checked,
       }));
       setData(newData);
+    } else {
+      setData(initialData);
     }
   }, [key, initialData]);
 
   const handleCheckBoxChange = (index: number, checked: boolean) => {
-    const newData = [...data];
-    newData[index].checked = checked;
+    const newData = data.map((item, idx) =>
+      idx === index ? { ...item, checked } : item
+    );
     setData(newData);
+    saveToLocalStorage(newData);
   };
 
   const handleToggleAll = (checked: boolean) => {
     const newData = data.map(item => ({ ...item, checked }));
     setData(newData);
+    saveToLocalStorage(newData);
   };
 
-  const saveToLocalStorage = () => {
+  const saveToLocalStorage = (data: CheckboxItem[]) => {
     localStorage.setItem(
       key,
       JSON.stringify(
@@ -43,7 +48,7 @@ const useCheckbox = (key: string, initialData: CheckboxItem[]) => {
     );
   };
 
-  return { data, handleCheckBoxChange, saveToLocalStorage, handleToggleAll };
+  return { data, handleCheckBoxChange, handleToggleAll };
 };
 
 export default useCheckbox;

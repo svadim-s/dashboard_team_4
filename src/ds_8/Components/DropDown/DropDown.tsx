@@ -31,18 +31,26 @@ const DropDown = ({ title, data, onChange, onToggleAll }: DropDownProps) => {
 
   return (
     <div className={cls.dropdown}>
-      <Button text={title} onClick={toggleOpen} color='secondary' leftImg={<ArrowIcon className={isOpen ? cls.rotatedOpen : cls.rotatedClose} />} />
+      <Button text={title} onClick={toggleOpen} color='dropDown' leftImg={<ArrowIcon className={isOpen ? cls.rotatedOpen : cls.rotatedClose} />} />
       {isOpen && (
         <div className={cls.menu}>
-          <Button text={allSelected ? "Убрать все" : "Выбрать все"} onClick={handleToggleAll} color='secondary' border />
-          {data.map((item, index) => (
-            <CheckBox
-              key={index}
-              label={item.name}
-              checked={item.checked}
-              onChange={(checked) => onChange(index, checked)}
-            />
-          ))}
+          <Button
+            text={allSelected ? "Убрать все" : "Выбрать все"}
+            onClick={handleToggleAll}
+            color='secondary'
+            border
+            background
+          />
+          <div className={cls.checkBox}>
+            {data.map((item, index) => (
+              <CheckBox
+                key={index}
+                label={item.name}
+                checked={item.checked}
+                onChange={(checked) => onChange(index, checked)}
+              />
+            ))}
+          </div>
         </div>
       )}
     </div>

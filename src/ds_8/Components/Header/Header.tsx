@@ -15,21 +15,7 @@ interface HeaderProps {
 }
 
 const Header = memo(({ selectedDates, setSelectedDates, setSelectedDevEnv, setSelectedFramework, setSelectedGrades, setSelectedTools }: HeaderProps) => {
-  // const [selectedDates, setSelectedDates] = useState<[Dayjs, Dayjs] | null>(null);
-  // const [selectedGrades, setSelectedGrades] = useState<string[]>([]);
-  // const [selectedFramework, setSelectedFramework] = useState<string[]>([]);
-  // const [selectedDevEnv, setSelectedDevEnv] = useState<string[]>([]);
-  // const [selectedTools, setSelectedTools] = useState<string[]>([]);
-
   const { RangePicker } = DatePicker;
-
-  // useEffect(() => {
-  //   const storedDates = localStorage.getItem('selectedDates');
-  //   if (storedDates) {
-  //     const parsedDates = JSON.parse(storedDates).map((date: string) => dayjs(date)) as [Dayjs, Dayjs];
-  //     setSelectedDates(parsedDates);
-  //   }
-  // }, []);
 
   const handleDatesChange = (dates: [Dayjs, Dayjs] | null) => {
     setSelectedDates(dates);

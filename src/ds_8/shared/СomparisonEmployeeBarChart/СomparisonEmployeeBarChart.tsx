@@ -5,6 +5,7 @@ import cls from './СomparisonEmployeeBarChart.module.scss'
 import { useAppDispatch, useAppSelector } from '../../common/hooks/useAppDispatch'
 import useStoredSettings from '../../common/hooks/useStoredSettings';
 import { fetchUserSkillsFirst, fetchUserSkillsSecond } from '../../services/fetchUserSkills'
+import { firstUserSkillsSelector, secondUserSkillsSelector } from '../../selectors/userSkillsSelector'
 
 interface СomparisonEmployeeBarChartProps {
   selectedGrades: string[]
@@ -16,7 +17,8 @@ interface СomparisonEmployeeBarChartProps {
 const СomparisonEmployeeBarChart = ({ selectedDevEnv, selectedFramework, selectedGrades, selectedTools }: СomparisonEmployeeBarChartProps) => {
   const dispatch = useAppDispatch()
   const [dataBarChartEmployee, setDataBarChartEmployee] = useState([]);
-  const { firstUserSkills, secondUserSkills } = useAppSelector((state) => state.userSkills)
+  const firstUserSkills = useAppSelector(firstUserSkillsSelector)
+  const secondUserSkills = useAppSelector(secondUserSkillsSelector)
 
   const {
     selectedFirstUserId,

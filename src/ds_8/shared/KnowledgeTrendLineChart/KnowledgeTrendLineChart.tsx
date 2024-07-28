@@ -8,6 +8,7 @@ import { fetchLineChart, fetchLineChartFillterKnowledge } from '../../services/f
 import { calculateLineChartPercentage } from '../../slices/lineChartSlice'
 import { fetchArea } from '../../services/fetchArea'
 import { Dayjs } from 'dayjs'
+import { lineChartDataSelector, lineChartPercentageDataSelector, lineFilterKnowledgeDataSelector } from '../../selectors/lineChartSelector'
 
 interface KnowledgeTrendLineChartProps {
   grades: string[]
@@ -22,7 +23,9 @@ const KnowledgeTrendLineChart = ({grades, selectedDates}: KnowledgeTrendLineChar
     setSelectedTab,
   } = useStoredSettings();
 
-  const { lineChartData, lineChartFilterKnowledgeData, lineChartPercentageData } = useAppSelector((state) => state.lineChart)
+  const lineChartData = useAppSelector(lineChartDataSelector)
+  const lineChartFilterKnowledgeData = useAppSelector(lineFilterKnowledgeDataSelector)
+  const lineChartPercentageData = useAppSelector(lineChartPercentageDataSelector)
   const { areaData } = useAppSelector((state) => state.area)
 
   useEffect(() => {
