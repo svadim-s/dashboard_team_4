@@ -45,7 +45,7 @@ const LevelJuniorPieChart = ({ selectedDevEnv, selectedFramework, selectedTools 
 
   useEffect(() => {
     setDataPieChartJunior([
-      { name: 'Получили уровень выше Junior по средам разработки, фреймворкам и инструментам', value: 100 - juniorPercentage, color: '#E989CE'},
+      { name: 'Получили уровень выше Junior', value: 100 - juniorPercentage, color: '#E989CE'},
       { name: 'Получили уровень Junior', value: juniorPercentage, color: '#76EAAB'}
     ]);
   }, [juniorPercentage]);
@@ -53,7 +53,7 @@ const LevelJuniorPieChart = ({ selectedDevEnv, selectedFramework, selectedTools 
 
   return (
     <div className={cls.pieChartWrapperLevel}>
-      <p className={cls.title}>Процентное соотношение сотрудников с уровнем навыков Junior и выше</p>
+      <p className={cls.title}>Процентное соотношение сотрудников с уровнем навыков Junior и выше по средам разработки, фреймворкам и инструментам</p>
       <div className={cls.pieChartGrades}>
         <div className={cls.chartWrapper}>
           <PieChartComponent data={dataPieChartJunior} label="value" centerLabel valueLabel={100 - juniorPercentage} toolTip />
