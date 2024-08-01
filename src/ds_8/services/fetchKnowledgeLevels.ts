@@ -13,7 +13,7 @@ export const fetchKnowledgeLevels = createAsyncThunk<KnowledgeResponse[], void>(
   async (_, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         ['knowledge_levels_название'],
         [],
         {},

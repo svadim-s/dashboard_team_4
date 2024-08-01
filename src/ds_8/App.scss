@@ -108,9 +108,12 @@ p {
   height: 42px;
 
   .ant-picker-input > input {
-    width: 70px;
     font-size: 18px;
     font-weight: 600;
+  }
+
+  .ant-picker-input input::placeholder {
+    color: #fff;
   }
 
   .ant-picker-panel-container {

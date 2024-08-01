@@ -12,7 +12,7 @@ export const fetchArea = createAsyncThunk<AreaResponse[], void>(
   async (_, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         ['область'],
         [],
         {},

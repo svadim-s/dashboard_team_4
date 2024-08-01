@@ -53,8 +53,11 @@ const LevelJuniorPieChart = ({ selectedDevEnv, selectedFramework, selectedTools 
 
   return (
     <div className={cls.pieChartWrapperLevel}>
-      <div className={cls.chartWrapper}>
-        <PieChartComponent data={dataPieChartJunior} label="name" centerLabel valueLabel={100 - juniorPercentage} toolTip />
+      <p className={cls.title}>Процентное соотношение сотрудников с уровнем навыков Junior и выше</p>
+      <div className={cls.pieChartGrades}>
+        <div className={cls.chartWrapper}>
+          <PieChartComponent data={dataPieChartJunior} label="value" centerLabel valueLabel={100 - juniorPercentage} toolTip />
+        </div>
       </div>
     </div>
   )

@@ -38,7 +38,11 @@ const pieChartSlice = createSlice({
     calculateJuniorPercentage: (state) => {
       if (state.juniorData !== null && state.highData !== null && state.highData !== 0) {
         const percentage = (state.juniorData / state.highData) * 100;
-        state.juniorPercentage = Math.round(percentage);
+        if (percentage > 100) {
+          state.juniorPercentage = 100;
+        } else {
+          state.juniorPercentage = Math.round(percentage);
+        }
       } else if (state.highData === 0 && state.juniorData !== null && state.juniorData !== 0) {
         state.juniorPercentage = 100;
       } else {

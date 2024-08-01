@@ -12,7 +12,7 @@ export const fetchUsers = createAsyncThunk<UserResponse[], void>(
   async (_, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         ['users_user_id'],
         [],
         {},

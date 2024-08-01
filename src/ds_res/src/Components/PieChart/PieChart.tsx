@@ -32,31 +32,31 @@ const renderCustomizedLabel = ({ percent }: { percent: number }) => {
   return `${(percent * 100).toFixed(0)}%`;
 };
 
-const renderCustomizedNameLabel = ({ name, x, y }: { name: string, x: number, y: number }) => {
-  const words = name.split(' ');
-  const lines = [];
-  let currentLine = words[0];
+// const renderCustomizedNameLabel = ({ name, x, y }: { name: string, x: number, y: number }) => {
+//   const words = name.split(' ');
+//   const lines = [];
+//   let currentLine = words[0];
 
-  for (let i = 1; i < words.length; i++) {
-    if (currentLine.length + words[i].length + 1 <= 20) {
-      currentLine += ' ' + words[i];
-    } else {
-      lines.push(currentLine);
-      currentLine = words[i];
-    }
-  }
-  lines.push(currentLine);
+//   for (let i = 1; i < words.length; i++) {
+//     if (currentLine.length + words[i].length + 1 <= 20) {
+//       currentLine += ' ' + words[i];
+//     } else {
+//       lines.push(currentLine);
+//       currentLine = words[i];
+//     }
+//   }
+//   lines.push(currentLine);
 
-  return (
-    <text x={x} y={y} textAnchor="middle" fill="#fff">
-      {lines.map((line, index) => (
-        <tspan key={index} x={x} dy={index === 0 ? 0 : '1.2em'}>
-          {line}
-        </tspan>
-      ))}
-    </text>
-  );
-};
+//   return (
+//     <text x={x} y={y} textAnchor="middle" fill="#fff">
+//       {lines.map((line, index) => (
+//         <tspan key={index} x={x} dy={index === 0 ? 0 : '1.2em'}>
+//           {line}
+//         </tspan>
+//       ))}
+//     </text>
+//   );
+// };
 
 export const PieChartComponent = memo((
   {
@@ -71,7 +71,7 @@ export const PieChartComponent = memo((
     toolTip
   }: PieChartType
 ) => {
-  const getLabel = label === 'value' ? renderCustomizedLabel : renderCustomizedNameLabel;
+  const getLabel = label === 'value' && renderCustomizedLabel;
 
   return (
       <ResponsiveContainer>

@@ -21,7 +21,7 @@ export const fetchSertificates = createAsyncThunk<SertificateResponse[], FilterD
   async (filterDates, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         [],
         ['count(distinct(fact_employee_sertificates_fact_id))', 'год_сертификата'],
         filterDates,

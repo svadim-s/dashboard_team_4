@@ -18,7 +18,7 @@ export const fetchUserSkillsFirst = createAsyncThunk<UserSkillsResponse[], UserS
   async (filters, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         [],
         ['count(distinct(skills_skill_id))'],
         filters,
@@ -37,7 +37,7 @@ export const fetchUserSkillsSecond = createAsyncThunk<UserSkillsResponse[], User
   async (filters, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         [],
         ['count(distinct(skills_skill_id))'],
         filters,

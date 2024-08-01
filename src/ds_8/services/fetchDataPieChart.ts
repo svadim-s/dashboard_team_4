@@ -17,7 +17,7 @@ export const fetchPieChartJunior = createAsyncThunk<UserKnowledgeResponse[], Fil
   async (filters, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         [],
         ['count(distinct(users_user_id))'],
         filters,
@@ -36,7 +36,7 @@ export const fetchPieChartHigher = createAsyncThunk<UserKnowledgeResponse[], Fil
   async (filters, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         [],
         ['count(distinct(users_user_id))'],
         filters,
@@ -55,7 +55,7 @@ export const fetchPieChartKnowledgeSenior = createAsyncThunk<UserKnowledgeRespon
   async (_, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         [],
         ['count(distinct(users_user_id))'],
         {
@@ -76,7 +76,7 @@ export const fetchPieChartKnowledgeMiddle = createAsyncThunk<UserKnowledgeRespon
   async (_, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         [],
         ['count(distinct(users_user_id))'],
         {
@@ -97,7 +97,7 @@ export const fetchPieChartKnowledgeJunior = createAsyncThunk<UserKnowledgeRespon
   async (_, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         [],
         ['count(distinct(users_user_id))'],
         {
@@ -118,7 +118,7 @@ export const fetchPieChartCountUsers = createAsyncThunk<UserKnowledgeResponse[],
   async (_, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         [],
         ['count(distinct(users_user_id))'],
         {},

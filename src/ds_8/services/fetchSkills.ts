@@ -13,7 +13,7 @@ export const fetchSkillsTools = createAsyncThunk<SkillsResponse[], void>(
   async (_, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         ['skills_название'],
         [],
         {
@@ -39,7 +39,7 @@ export const fetchSkillsFramework = createAsyncThunk<SkillsResponse[], void>(
   async (_, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         ['skills_название'],
         [],
         {
@@ -65,7 +65,7 @@ export const fetchSkillsDevEnv = createAsyncThunk<SkillsResponse[], void>(
   async (_, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         ['skills_название'],
         [],
         {

@@ -24,7 +24,7 @@ export const fetchLineChartFillterKnowledge = createAsyncThunk<LineChartResponse
   async (filters, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         ['count(fact_employee_skills_skill_id)', 'year(дата)'],
         [],
         filters,
@@ -46,7 +46,7 @@ export const fetchLineChart = createAsyncThunk<LineChartResponse[], FilterLineCh
   async (filters, { rejectWithValue }) => {
     try {
       const response = await koobDataRequest3(
-        'team_4.team_4',
+        'team_4.team_4_main',
         ['count(fact_employee_skills_skill_id)', 'year(дата)'],
         [],
         filters,
